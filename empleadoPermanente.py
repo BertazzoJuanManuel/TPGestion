@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-class EmpleadoPermanente:
+class EmpleadoPermanente(Empleado):
     def __init__(self, nombre, apellido, dni, salario, antiguedad):
         self.nombre = nombre
         self.apellido = apellido
@@ -23,7 +23,6 @@ class EmpleadoPermanente:
             return False
 
     def mostrar_datos(self):
-        texto = f"Nombre y apellido: {self.nombre} {self.apellido}\n"
-        texto += f"DNI: {self.dni} - Salario: {self.salario}\n"
+        texto = super().mostrar_datos()
         texto += f"Antigüedad: {self.antiguedad}\n"
         return texto

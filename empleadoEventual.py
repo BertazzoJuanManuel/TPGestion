@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-class EmpleadoEventual:
+class EmpleadoEventual(Empleado):
     def __init__(self, nombre, apellido, dni, salario, ventas):
         self.nombre = nombre
         self.apellido = apellido
@@ -31,7 +31,6 @@ class EmpleadoEventual:
             return False
 
     def mostrar_datos(self):
-        texto = f"Nombre y apellido: {self.nombre} {self.apellido}\n"
-        texto += f"DNI: {self.dni} - Salario: {self.salario}\n"
+        texto = super().mostrar_datos()
         texto += f"Ventas: {self.ventas}\n"
         return texto
