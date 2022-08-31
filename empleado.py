@@ -1,16 +1,11 @@
 #clase empleado que abstraiga la funcionalidad de las clases EmpleadoEventual y EmpleadoPermanente.
 class Empleado:
-     def __init__(self, nombre, apellido, dni, salario, antiguedad,ventas):
+     def __init__(self, nombre, apellido, dni, salario):
         self.nombre = nombre
         self.apellido = apellido
         self.dni = dni
         self.salario = salario
-        self.antiguedad = antiguedad
-        self.ventas = ventas
 
-    def calcular_comision(self):
-        comision = self.salario * self.antiguedad / 100
-        return comision
 
     def calcular_ingreso_total(self):
         ingreso_total = self.salario + self.calcular_comision()
@@ -25,5 +20,4 @@ class Empleado:
     def mostrar_datos(self):
         texto = f"Nombre y apellido: {self.nombre} {self.apellido}\n"
         texto += f"DNI: {self.dni} - Salario: {self.salario}\n"
-        texto += f"Antigüedad: {self.antiguedad}\n"
         return texto

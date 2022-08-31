@@ -2,11 +2,8 @@
 from empleado import Empleado
 class EmpleadoEventual(Empleado):
     def __init__(self, nombre, apellido, dni, salario, ventas):
-        self.nombre = nombre
-        self.apellido = apellido
-        self.dni = dni
-        self.salario = salario
         self.ventas = ventas
+        super().__init__(nombre,apellido,dni,salario)
 
     def calcular_comision(self):
         total_ventas = 0

@@ -2,11 +2,8 @@
 from empleado import Empleado
 class EmpleadoPermanente(Empleado):
     def __init__(self, nombre, apellido, dni, salario, antiguedad):
-        self.nombre = nombre
-        self.apellido = apellido
-        self.dni = dni
-        self.salario = salario
         self.antiguedad = antiguedad
+        super().__init__(nombre,apellido,dni,salario)
 
     def calcular_comision(self):
         comision = self.salario * self.antiguedad / 100
